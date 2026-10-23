@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handar Arfianto — Portfolio Data & Statistik</title>
+<meta name="description" content="Portfolio profesional Handar Arfianto — pendataan lapangan, pengolahan data, statistik, dokumentasi, sertifikasi, dan hasil lapangan.">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+	@theme {
+		--color-clifford: #da373d;
+	}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif}
+  h1,h2,h3,.brand{font-family:"Space Grotesk",Inter,sans-serif}
+  .glass{backdrop-filter:blur(14px);background:rgba(255,255,255,.78)}
+  .dark .glass{background:rgba(15,23,42,.78)}
+  .grid-bg{background-image:linear-gradient(rgba(148,163,184,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.09) 1px,transparent 1px);background-size:28px 28px}
+  .line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .progress{height:8px;border-radius:999px;background:#e2e8f0;overflow:hidden}
+  .dark .progress{background:#334155}
+  .progress>span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2563eb,#0ea5e9)}
+  .fade-in{animation:fade .45s ease both}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+
+<style>
+/* CONTACT PAGE */
+.contact-section{padding:72px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;margin-top:28px}
+.contact-card{border:1px solid var(--border,#e5e7eb);background:var(--card,#fff);border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.contact-card h3{margin:0 0 8px}
+.contact-card>p{opacity:.75;line-height:1.7}
+.contact-list{display:grid;gap:12px;margin-top:22px}
+.contact-item{display:flex;gap:13px;align-items:center;padding:14px;border-radius:15px;background:var(--surface,#f8fafc)}
+.contact-icon{width:40px;height:40px;min-width:40px;border-radius:11px;display:grid;place-items:center;background:var(--primary,#2563eb);color:#fff;font-size:12px;font-weight:800}
+.contact-item strong{display:block;margin-bottom:3px}
+.contact-item a{color:inherit;text-decoration:none;word-break:break-word}
+.contact-item a:hover{text-decoration:underline}
+.contact-form{display:grid;gap:15px;margin-top:20px}
+.contact-form label{display:block;font-weight:650;font-size:.93rem}
+.contact-form input,.contact-form textarea{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:12px 13px;border:1px solid var(--border,#d1d5db);border-radius:11px;background:var(--input,#fff);color:inherit;font:inherit;outline:none}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--primary,#2563eb);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.contact-form textarea{min-height:125px;resize:vertical}
+.contact-submit{border:0;border-radius:11px;padding:12px 17px;background:var(--primary,#2563eb);color:#fff;font-weight:700;cursor:pointer;font:inherit}
+.contact-submit:hover{filter:brightness(.95)}
+.contact-note{font-size:.82rem;opacity:.65;margin:0}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}.contact-section{padding:55px 0}}
+
+  .doc-gallery img{transition:transform .3s ease}
+  .doc-gallery button:hover img{transform:scale(1.05)}
+</style>
+
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<div class="min-h-screen">
+<header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800 glass">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="#beranda" class="brand font-bold text-lg tracking-tight">HA<span class="text-blue-600">.</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+      <a href="#beranda" class="hover:text-blue-600">Beranda</a>
+      <a href="#kegiatan" class="hover:text-blue-600">Kegiatan</a>
+      <a href="#lapangan" class="hover:text-blue-600">Hasil Lapangan</a>
+      <a href="#dokumentasi" class="hover:text-blue-600">Dokumentasi</a>
+      <a href="#sertifikasi" class="hover:text-blue-600">Sertifikasi</a>
+    
+<a href="#kontak">Kontak</a>
+</nav>
+    <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center" aria-label="Ganti tema">◐</button>
+  </div>
+</header>
+
+<main>
+<section id="beranda" class="relative overflow-hidden grid-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid lg:grid-cols-[1.3fr_.7fr] gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 text-xs font-bold mb-5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Portfolio Profesional & Database Statistik
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">Handar Arfianto</h1>
+        <p class="mt-4 text-xl font-semibold text-blue-600 dark:text-blue-400">Enumerator • Admin Data • Pengolahan Statistik</p>
+        <p class="mt-6 max-w-2xl text-slate-600 dark:text-slate-300 leading-8">
+          Selamat datang di portofolio digital profesional. 
+		  Berpengalaman tinggi dalam pendataan lapangan (CAPI/PAPI), 
+		  validasi statistik, serta pengolahan database untuk berbagai Sensus & 
+		  Survei Statistik Nasional Badan Pusat Statistik.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#kegiatan" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-bold shadow-lg shadow-blue-600/20 hover:bg-blue-700">Lihat Kegiatan</a>
+          <a href="#lapangan" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 font-bold hover:border-blue-500">Database Lapangan</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square max-w-sm mx-auto rounded-[2rem] bg-gradient-to-br from-blue-600 to-cyan-400 p-1 shadow-2xl">
+          <div class="w-full h-full rounded-[1.8rem] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img id="profilePhoto" src="" alt="Foto Profil Handar Arfianto" class="w-full h-full object-cover hidden">
+            <div id="profilePlaceholder" class="text-center p-8">
+              <div class="w-24 h-24 rounded-3xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-300 mx-auto flex items-center justify-center text-4xl font-black">HA</div>
+              <p class="mt-5 font-bold text-lg">Foto Profil Profesional</p>
+			  <img id="Foto Profil Handar" src="" alt="Foto Profil Profesional">
+				
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-8 -mt-2">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-3xl font-black" id="statKegiatan">0</div><div class="text-xs text-slate-500 mt-1">Kegiatan Aktif</div></div>
+    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-3xl font-black" id="statLapangan">0</div><div class="text-xs text-slate-500 mt-1">Entry Hasil Lapangan</div></div>
+    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-3xl font-black" id="statDok">0</div><div class="text-xs text-slate-500 mt-1">Dokumentasi & Publikasi</div></div>
+    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-3xl font-black" id="statCert">0</div><div class="text-xs text-slate-500 mt-1">Sertifikasi</div></div>
+  </div>
+</div>
+</section>
+
+<section id="kegiatan" class="py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+    <div><p class="text-xs font-bold uppercase tracking-widest text-blue-600">Database Kegiatan</p><h2 class="text-3xl font-extrabold mt-1">Kegiatan & Pengalaman</h2></div>
+    <input id="searchKegiatan" oninput="renderKegiatan()" class="w-full sm:w-80 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Cari kegiatan...">
+  </div>
+  <div id="kegiatanGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5"></div>
+</div>
+</section>
+
+<section id="lapangan" class="py-16 bg-slate-100/70 dark:bg-slate-900/40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+    <div><p class="text-xs font-bold uppercase tracking-widest text-emerald-600">Database Hasil Lapangan</p><h2 class="text-3xl font-extrabold mt-1">Target & Realisasi</h2></div>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <input id="searchLapangan" oninput="renderLapangan()" class="px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 outline-none" placeholder="Cari survei/kecamatan...">
+      <select id="filterLapangan" onchange="renderLapangan()" class="px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 outline-none">
+        <option value="ALL">Semua Status</option><option>Tervalidasi</option><option>Menunggu</option><option>Perlu Perbaikan</option>
+      </select>
+    </div>
+  </div>
+  <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <table class="min-w-full text-sm"><thead class="bg-slate-50 dark:bg-slate-800"><tr>
+      <th class="text-left p-4">ID</th><th class="text-left p-4">Survei</th><th class="text-left p-4">Kecamatan</th><th class="text-left p-4">Metode</th><th class="text-right p-4">Target</th><th class="text-right p-4">Realisasi</th><th class="text-left p-4">Status</th>
+    </tr></thead><tbody id="lapanganBody"></tbody></table>
+  </div>
+</div>
+</section>
+
+<section id="dokumentasi" class="py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="mb-8"><p class="text-xs font-bold uppercase tracking-widest text-orange-600">Dokumentasi & Publikasi</p><h2 class="text-3xl font-extrabold mt-1">Dokumentasi</h2></div>
+  <div id="dokumentasiGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+</div>
+</section>
+
+<section id="sertifikasi" class="py-16 bg-slate-100/70 dark:bg-slate-900/40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="mb-8"><p class="text-xs font-bold uppercase tracking-widest text-purple-600">Kompetensi</p><h2 class="text-3xl font-extrabold mt-1">Sertifikasi & Pelatihan</h2></div>
+  <div id="sertifikasiGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+</div>
+</section>
+</main>
+
+
+<section id="kontak" class="contact-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Hubungi Saya</span>
+      <h2>Kontak</h2>
+      <p>Silakan hubungi saya untuk kebutuhan kerja sama, pendataan, pengolahan data, administrasi data, atau informasi profesional lainnya.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Mari Terhubung</h3>
+        <p>Gunakan informasi berikut untuk menghubungi saya secara langsung.</p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:handar.data@gmail.com">handar.data@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">WA</div>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/6281329191582" target="_blank" rel="noopener">+62 813-2919-1582</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⌖</div>
+            <div>
+              <strong>Lokasi</strong>
+              <span>Demak, Jawa Tengah, Indonesia</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">in</div>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="#" target="_blank" rel="noopener">Profil LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Kirim Pesan</h3>
+        <form class="contact-form" id="contactForm">
+          <div>
+            <label for="contactName">Nama</label>
+            <input id="contactName" name="name" type="text" placeholder="Nama Anda" required>
+          </div>
+          <div>
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" placeholder="nama@email.com" required>
+          </div>
+          <div>
+            <label for="contactSubject">Subjek</label>
+            <input id="contactSubject" name="subject" type="text" placeholder="Subjek pesan" required>
+          </div>
+          <div>
+            <label for="contactMessage">Pesan</label>
+            <textarea id="contactMessage" name="message" placeholder="Tuliskan pesan Anda..." required></textarea>
+          </div>
+          <button class="contact-submit" type="submit">Kirim melalui Email</button>
+          <p class="contact-note">Tombol akan membuka aplikasi email Anda dengan isi pesan yang sudah disiapkan.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-slate-500">
+  <span>© <span id="year"></span> Handar Arfianto</span><span id="syncStatus">Memuat database...</span>
+</div>
+</footer>
+</div>
+
+<script>
+// ===============================
+// KONFIGURASI
+// ===============================
+const GOOGLE_SHEETS_API_URL = "https://script.google.com/macros/s/AKfycbx8csHej7NeNjjo-JeVYhPwX0-a55coezs-MbhScaNDqYuCDrfxh-fhoZjr9Tl2KRz4TA/exec";
+const PROFILE_PHOTO_URL = "https://docs.google.com/uc?id=1WbbOw-K25F1_H9z61EDomCRv7hXpzmW6"; // Isi URL foto profesional Anda.
+
+// Data awal berasal dari workbook lampiran.
+// Kolom Gambar pada Dokumentasi mendukung beberapa URL:
+// URL1
+// URL2
+// atau URL1, URL2, URL3
+// Setelah GOOGLE_SHEETS_API_URL diisi, data dari Google Sheets akan menjadi sumber utama.
+const INITIAL_DATABASE = {"Kegiatan":[{"ID":"KEG001","Judul":"Survei Pertanian (KSA Jagung)","Kategori":"produksi","Tahun":"2023 - 2026","Peran":"Petugas Pendataan Lapangan (PPL)","Responden":"576 Segmen","Metode":"CAPI (BPS KSA App)","Status":"Rutin Berjalan","Deskripsi":"Pengamatan titik sampel segmen tanaman jagung di wilayah Kecamatan Karangtengah, Guntur, Karangawen, Dempet & Demak Kota.","Aktif":true},{"ID":"KEG002","Judul":"Laporan Pemotongan Ternak Bulanan (LPTB)","Kategori":"produksi","Tahun":"2023 - 2026","Peran":"Enumerator & Validasi","Responden":"96 Usaha/Perusahaan","Metode":"CAPI (FASIH)","Status":"Rutin Berjalan","Deskripsi":"Mengumpulkan data jumlah dan karakteristik hewan ternak yang disembelih dalam periode satu bulan.","Aktif":true},{"ID":"KEG003","Judul":"Survei Industri Besar Sedang Triwulanan (SIBS-TR)","Kategori":"produksi","Tahun":"2023 - 2026","Peran":"Petugas Pendataan Lapangan","Responden":"36 Usaha/Perusahaan","Metode":"CAPI / PAPI","Status":"Selesai 80%","Deskripsi":"Pendataan berkala memantau aktivitas dan pertumbuhan kinerja ekonomi pada sektor industri manufaktur (pengolahan) skala menengah dan besar.","Aktif":true},{"ID":"KEG004","Judul":"Survei Pertanian (Updating Ubinan Palawija)","Kategori":"produksi","Tahun":"2025 - 2026","Peran":"Petuga Updating Lapangan","Responden":"262 Rumah Tangga","Metode":"CAPI & GIS Mapping","Status":"Selesai 100%","Deskripsi":"Pemutakhiran data rumah tangga tani yang mengusahakan tanaman palawija pada blok sensus terpilih.","Aktif":true},{"ID":"KEG005","Judul":"Survei Konversi Gabah Beras-Giling (SKGB-GILING)","Kategori":"produksi","Tahun":"2025 & 2026","Peran":"Petugas Pendataan Lapangan","Responden":"25 Usaha/Perusahaan","Metode":"PAPI & App KSA","Status":"Selesai 100%","Deskripsi":"Pengumpulan data untuk menghitung besaran angka konversi dari gabah kering giling (GKG) menjadi beras siap konsumsi.","Aktif":true},{"ID":"KEG006","Judul":"Survei Khusus Neraca Produksi (SKNP)","Kategori":"produksi","Tahun":2026.0,"Peran":"Petugas Pendataan Lapangan","Responden":"4 Usaha/Perusahaan","Metode":"Fasih BPS","Status":"Selesai 60%","Deskripsi":"Pengumpulan data bulanan mengenai struktur pendapatam, struktur pengeluaran, struktur pengeluaran, dan proses produksi dari berbagai pelaku usaha/perusahaan di Demak.","Aktif":true},{"ID":"KEG-1790002768315","Judul":"Updating Direktori Usaha Pertanian Lainnya (DUTL)","Kategori":"produksi","Tahun":"2024 - 2026","Peran":"Petugas Pendataan Lapangan","Responden":"15 Usaha/Perusahaan","Metode":"CAPI (FASIH)","Status":"Selesai 100%","Deskripsi":"Updating unit usaha pertanian non-rumah tangga dan non-perusahaan berbadan hukum di Demak","Aktif":true},{"ID":"KEG-1790002770593","Judul":"Updating Direktori Perusahaan Pertanian Lainnya (DUTL)","Kategori":"produksi","Tahun":"2024 - 2026","Peran":"Petugas Pendataan Lapangan","Responden":"3 Usaha/Perusahaan","Metode":"CAPI (FASIH)","Status":"Selesai 100%","Deskripsi":"Updating direktori unit usaha pertanian perusahaan berbadan hukum di Demak","Aktif":true},{"ID":"KEG-1790003338157","Judul":"Pemutakhiran Direktori Perusahaan Awal (DPA)","Kategori":"produksi","Tahun":"2023 - 2026","Peran":"Petugas Pendataan Lapangan","Responden":"33 Usaha/Perusahaan","Metode":"CAPI (FASIH)","Status":"Selesai 100%","Deskripsi":"Memperbarui basis data (direktori) mengenai peofil, keberadaan dan status operasional perusahaan di Demak","Aktif":true},{"ID":"KEG-1790003573265","Judul":"Survei Kesejahteraan Petani (SKP)","Kategori":"produksi","Tahun":2026.0,"Peran":"Petugas Pendataan Lapangan","Responden":"13 Unit Usaha/ Rumah tangga","Metode":"CAPI (FASIH)","Status":"Selesai 60%","Deskripsi":"Pendataan lapangan yang dirancang khusus untuk memotret kondisi sosial-ekonomi rumah tangga petani di Demak","Aktif":true},{"ID":"KEG-1790003850695","Judul":"Survei Tahunan Perusahaan Industri Manufaktur (STPM)","Kategori":"produksi","Tahun":"2023 - 2026","Peran":"Petugas Pendataan Lapangan","Responden":"33 Perusahaan","Metode":"CAPI (FASIH)","Status":"Selesai 80%","Deskripsi":"Pengumpulan data rutin untuk memotret gambaran utuh, kondisi, kinerja, serta perkembangan sektor industri pengolahan (manufaktur) skala menengah dan besar di Demak","Aktif":true},{"ID":"KEG-1790004183946","Judul":"Survei VP dan VN Horti","Kategori":"produksi","Tahun":"2023 - 2026","Peran":"Petugas Pendataan Lapangan","Responden":"6 Perusahaan","Metode":"CAPI (FASIH)","Status":"Selesai 100%","Deskripsi":"Pengumpukan data rutin tahunan untuk memotret karakteristik usaha dan profil produksi di subsektor pertanian tanaman hortikultura, unit usaha pertanian berbadan hukum dan unit usaha pertanian bukan perusahaan berbadan hukum di Demak","Aktif":true}],"Dokumentasi":[{"ID":"DOC001","Judul":"Pendataan Statistik Lapangan","Kategori":"Pendataan","Tahun":2026.0,"Deskripsi":"Dokumentasi kegiatan pendataan lapangan, pengumpulan data langsung dari responden di lapangan, dengan paper and pencil interviewing (PAPI) , computer assisted personal interviewing (CAPI), computer assisted telephone interviewing (CATI) dan computer assisted web interviewing (CAWI).","URL":"https://example.com/dokumentasi/doc001","Gambar":"https://drive.google.com/file/d/1LE3vJLiTClzG1WxMXsd_I2z-DPBzfumL/view?usp=drive_link","Aktif":true},{"ID":"DOC002","Judul":"Pengolahan Data Statistik","Kategori":"Pengolahan Data","Tahun":2026.0,"Deskripsi":"Dokumentasi proses pengolahan dan validasi data, mengubah data mentah menjadi informasi yang bersih, akurat dan siap dipublikasikan, meliputi: receiving batching, editing coding, entry data, analisis dan penimbangan (weighting) dan diseminasi.","URL":"https://example.com/dokumentasi/doc002","Gambar":"https://drive.google.com/file/d/100GS0oLI4QknyaKrUD2ENOu4SLjYUFfB/view?usp=drive_link","Aktif":true},{"ID":"DOC003","Judul":"Publikasi Statistik, Kecamatan Karanganyar Dalam Angka 2011","Kategori":"Publikasi","Tahun":2011.0,"Deskripsi":"Hasil publikasi dan penyajian data statistik, mengenai gambaran kondisi geografi, kependudukan, sosial serta perekonomian di wilayah Kecamatan Karanganyar, Kabupaten Demak","URL":"https://demakkab.bps.go.id/id/publication/2012/02/24/37e6d77d6c7950f8049bf589/kecamatan-karanganyar-dalam-angka-2011.html","Gambar":"https://drive.google.com/file/d/15XeJCq-zlD4KSKWmRmXHDmxHgqhVqA2L/view?usp=drive_link","Aktif":true},{"ID":"DOC004","Judul":"Publikasi Statistik, Kecamatan Bonang Dalam Angka 2012","Kategori":"Publikasi","Tahun":2012.0,"Deskripsi":"Hasil publikasi dan penyajian data statistik, mengenai gambaran kondisi geografi, kependudukan, sosial serta perekonomian di wilayah Kecamatan Bonang, Kabupaten Demak","URL":"https://demakkab.bps.go.id/id/publication/2013/01/22/20a9b80805834c33b31e58a1/kecamatan-bonang-dalam-angka-2012.html","Gambar":"https://drive.google.com/file/d/1SQKEc-5IZ3z187qv2tvCqGXBfgswqVzo/view?usp=drive_link","Aktif":true}],"HasilLapangan":[{"ID":"HL-2026-001","Survei":"Survei Konversi Gabah Beras 2026","Kecamatan":"Demak, Mijen, Wonosalam","Metode":"CAPI","Target":13.0,"Realisasi":13.0,"Status":"Tervalidasi"},{"ID":"HL-2026-002","Survei":"Survei Kerangka Sampel Area (KSA) Jagung 2026","Kecamatan":"Demak, Karangtengah, Guntur, Karangawen","Metode":"CAPI ","Target":108.0,"Realisasi":108.0,"Status":"Menunggu"},{"ID":"HL-2026-003","Survei":"Survei Kesejahteraan Petani (SKP) 2026","Kecamatan":"Demak, Karangtengah","Metode":"CAPI","Target":9.0,"Realisasi":6.0,"Status":"Menunggu"},{"ID":"HL-2026-004","Survei":"Survei Tahunan Perusahaan Industri Manufaktur (STPIM) 2026","Kecamatan":"Demak, Wonosalam, Sayung","Metode":"CAPI","Target":11.0,"Realisasi":8.0,"Status":"Perlu Perbaikan"}],"Sertifikasi":[{"ID":"CERT001","Judul":"Sertifikat Kompetensi PPPK","Kategori":"Sertifikasi","Tahun":2021.0,"Deskripsi":"Sertifikat kompetensi PPPK.","URL":"https://drive.google.com/file/d/1au6HwrjfrwtoSIsW_a9V9mhfDFrnAOlr/view?usp=drive_link","Gambar":"https://example.com/images/cert001.jpg","Aktif":true},{"ID":"CERT002","Judul":"Sertifikat Pembelajaran Python with AI","Kategori":"Pelatihan","Tahun":2023.0,"Deskripsi":"Sertifikat pelatihan python.","URL":"https://drive.google.com/file/d/1z0fm96BV7d6B7FBqqn-0ncFmoBBGsqEn/view?usp=drive_link","Gambar":"https://example.com/images/cert002.jpg","Aktif":true},{"ID":"CERT003","Judul":"Sertifikat Pembelajaran SQL with AI","Kategori":"Pelatihan","Tahun":2023.0,"Deskripsi":"Sertifikat pelatihan SQL.","URL":"https://drive.google.com/file/d/1xx4vxiSJAZfG8cjpZJJsLtqmACYfxk54/view?usp=drive_link","Gambar":"https://example.com/images/cert003.jpg","Aktif":true},{"ID":"CERT004","Judul":"Sertifikat Pembelajaran Python for Data Professional Beginner","Kategori":"Pelatihan","Tahun":2023.0,"Deskripsi":"Sertifikat Pelatihan python for data","URL":"https://drive.google.com/file/d/135Irm15ffQsQXKk0xLM6ofGmdeRmZ8dW/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT005","Judul":"Sertifikat Pembelajaran Basic Excel","Kategori":"Pelatihan","Tahun":2023.0,"Deskripsi":"Sertifikat Pelatihan excel","URL":"https://drive.google.com/file/d/12qEmR7ggRxC6MZb1y589vCIR4TWX96em/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT006","Judul":"Sertifikat Kompetensi PPPK","Kategori":"Sertifikasi","Tahun":2023.0,"Deskripsi":"Sertifikat kompetensi PPPK.","URL":"https://drive.google.com/file/d/1ihieilGSY9nqQH3JeRG7KEXDoKriQxZW/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT007","Judul":"Sertifikat Kompetensi PPPK","Kategori":"Sertifikasi","Tahun":2023.0,"Deskripsi":"Sertifikat kompetensi PPPK.","URL":"https://drive.google.com/file/d/1aRm8hKu6ylkyOVm1YO1MO_YSkzlpkb1q/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT008","Judul":"Sertifikat Pembelajaran Excel for Analytics","Kategori":"Pelatihan","Tahun":2024.0,"Deskripsi":"Sertifikat Pelatihan excel for analytics","URL":"https://drive.google.com/file/d/1tFwahzHEemt4fXfkRnplCSbjSiYR0o6Q/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT009","Judul":"Sertifikat Petugas Pemutakhiran Direktori Perusahaan Awal","Kategori":"Pelatihan","Tahun":2024.0,"Deskripsi":"Sertifikat Pelatihan Petugas","URL":"https://drive.google.com/file/d/1Lpx7T4tylt_7jp2KvWGkPHxh2mgQvqb8/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT010","Judul":"Sertifikat Petugas Survei Industri Pengolahan, Pertambangan, Energi dan Konstruksi","Kategori":"Pelatihan","Tahun":2025.0,"Deskripsi":"Sertifikat Petlatihan Petugas","URL":"https://drive.google.com/file/d/1eBG6HvOaYjPmz98xqEyzgrx7OmK9QRti/view?usp=drive_link","Gambar":null,"Aktif":true},{"ID":"CERT011","Judul":"Sertifikat Petugas Updating Direktori Perusahaan Pertanian","Kategori":"Pelatihan","Tahun":2025.0,"Deskripsi":"Sertifikat Petlatihan Petugas","URL":"https://drive.google.com/file/d/1scm0AjqV6b2lQybxtbyVkxtSVbl_9TMq/view?usp=drive_link","Gambar":"https://example.com/images/cert003.jpg","Aktif":true}]};
+
+let db = structuredClone(INITIAL_DATABASE);
+
+function esc(v){
+  return String(v ?? "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+}
+function driveImage(url){
+  if(!url) return "";
+  const value = String(url).trim();
+
+  // Google Drive: ubah URL berbentuk /file/d/ID/... menjadi thumbnail.
+  // Thumbnail lebih stabil digunakan sebagai sumber <img> dibanding halaman /view.
+  const m = value.match(/(?:drive\.google\.com\/(?:file\/d|open\?id=)|id=)([a-zA-Z0-9_-]+)/);
+  if(m){
+    return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w1200`;
+  }
+
+  // Jika sudah berupa URL gambar biasa, gunakan langsung.
+  return value;
+}
+function toggleTheme(){
+  document.documentElement.classList.toggle("dark");
+  localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+}
+function badge(status){
+  const s=String(status||"").toLowerCase();
+  let cls="bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300";
+  if(s.includes("valid")) cls="bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300";
+  else if(s.includes("menunggu")) cls="bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300";
+  else if(s.includes("perbaikan")) cls="bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300";
+  return `<span class="inline-flex px-2.5 py-1 rounded-full text-[11px] font-bold ${cls}">${esc(status)}</span>`;
+}
+function renderStats(){
+  statKegiatan.textContent=db.Kegiatan.length;
+  statLapangan.textContent=db.HasilLapangan.length;
+  statDok.textContent=db.Dokumentasi.length;
+  statCert.textContent=db.Sertifikasi.length;
+}
+function renderKegiatan(){
+  const q=(searchKegiatan.value||"").toLowerCase();
+  const rows=db.Kegiatan.filter(x => Object.values(x).join(" ").toLowerCase().includes(q));
+  kegiatanGrid.innerHTML=rows.map(x=>`
+    <article class="fade-in p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition">
+      <div class="flex items-center justify-between gap-3 mb-4"><span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">${esc(x.Kategori)}</span><span class="text-xs font-semibold text-slate-500">${esc(x.Tahun)}</span></div>
+      <h3 class="text-lg font-extrabold">${esc(x.Judul)}</h3>
+      <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 line-clamp-3">${esc(x.Deskripsi)}</p>
+      <div class="mt-5 space-y-2 text-xs">
+        <div class="flex justify-between gap-4"><span class="text-slate-500">Peran</span><b class="text-right">${esc(x.Peran)}</b></div>
+        <div class="flex justify-between gap-4"><span class="text-slate-500">Cakupan</span><b class="text-right">${esc(x.Responden)}</b></div>
+        <div class="flex justify-between gap-4"><span class="text-slate-500">Metode</span><b class="text-right text-blue-600">${esc(x.Metode)}</b></div>
+      </div>
+      <div class="mt-5">${badge(x.Status)}</div>
+    </article>`).join("") || `<div class="col-span-full text-center py-12 text-slate-500">Tidak ada kegiatan yang cocok.</div>`;
+}
+function renderLapangan(){
+  const q=(searchLapangan.value||"").toLowerCase(), f=filterLapangan.value;
+  const rows=db.HasilLapangan.filter(x => (f==="ALL" || String(x.Status||"").trim()===f) && Object.values(x).join(" ").toLowerCase().includes(q));
+  lapanganBody.innerHTML=rows.map(x=>{
+    const t=Number(x.Target)||0,r=Number(x.Realisasi)||0,p=t?Math.min(100,Math.round(r/t*100)):0;
+    return `<tr class="border-t border-slate-100 dark:border-slate-800">
+      <td class="p-4 font-mono font-bold">${esc(x.ID)}</td><td class="p-4 font-semibold">${esc(x.Survei)}</td><td class="p-4">${esc(x.Kecamatan)}</td><td class="p-4">${esc(x.Metode)}</td>
+      <td class="p-4 text-right">${esc(t)}</td><td class="p-4 text-right font-bold">${esc(r)}<div class="progress mt-2 w-24 ml-auto"><span style="width:${p}%"></span></div><div class="text-[10px] text-right text-slate-400 mt-1">${p}%</div></td>
+      <td class="p-4">${badge(x.Status)}</td></tr>`}).join("") || `<tr><td colspan="7" class="p-12 text-center text-slate-500">Tidak ada data.</td></tr>`;
+}
+function normalizeImages(value){
+  if(!value) return [];
+
+  // Mendukung:
+  // 1) satu URL
+  // 2) beberapa URL dipisahkan koma
+  // 3) beberapa URL dipisahkan baris baru
+  // 4) array ["url1","url2"]
+  let values = Array.isArray(value) ? value : String(value).split(/[\n,]+/);
+
+  return values
+    .map(v => String(v || "").trim())
+    .filter(Boolean)
+    .map(v => driveImage(v))
+    .filter(Boolean);
+}
+
+function openImageLightbox(url, title){
+  const old = document.getElementById("imageLightbox");
+  if(old) old.remove();
+
+  const overlay = document.createElement("div");
+  overlay.id = "imageLightbox";
+  overlay.className = "fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4";
+  overlay.innerHTML = `
+    <button type="button" aria-label="Tutup"
+      class="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl">
+      ×
+    </button>
+    <div class="max-w-6xl max-h-[90vh] flex flex-col items-center gap-3">
+      <img src="${esc(url)}" alt="${esc(title || "Dokumentasi")}"
+           class="max-w-full max-h-[82vh] object-contain rounded-xl shadow-2xl">
+      <div class="text-white text-sm text-center">${esc(title || "")}</div>
+    </div>
+  `;
+
+  overlay.addEventListener("click", e => {
+    if(e.target === overlay || e.target.tagName === "BUTTON") overlay.remove();
+  });
+
+  document.body.appendChild(overlay);
+}
+
+function renderDokumentasi(){
+  dokumentasiGrid.innerHTML = db.Dokumentasi.map(x => {
+    const images = normalizeImages(x.Gambar);
+
+    const gallery = images.length
+      ? `<div class="grid ${images.length === 1 ? "grid-cols-1" : "grid-cols-2"} gap-2">
+          ${images.map((img, i) => `
+            <button type="button"
+              onclick='openImageLightbox(${JSON.stringify(img)}, ${JSON.stringify(x.Judul)})'
+              class="group relative h-40 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <img src="${esc(img)}"
+                   alt="${esc(x.Judul)} - Foto ${i + 1}"
+                   class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-slate-400 text-xs p-3 text-center\">Foto tidak dapat ditampilkan</div>'">
+              <span class="absolute bottom-2 right-2 px-2 py-1 rounded-lg bg-black/60 text-white text-[10px] font-bold">
+                Foto ${i + 1}
+              </span>
+            </button>
+          `).join("")}
+        </div>`
+      : `<div class="h-44 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 text-sm">
+          Belum ada foto
+        </div>`;
+
+    return `
+      <article class="rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition">
+        <div class="p-3">
+          ${gallery}
+        </div>
+
+        <div class="px-5 pb-5">
+          <div class="flex justify-between gap-3">
+            <span class="text-[10px] font-bold uppercase text-orange-600">${esc(x.Kategori)}</span>
+            <span class="text-xs text-slate-500">${esc(x.Tahun)}</span>
+          </div>
+
+          <h3 class="font-extrabold mt-2">${esc(x.Judul)}</h3>
+
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 line-clamp-3">
+            ${esc(x.Deskripsi)}
+          </p>
+
+          <div class="mt-3 text-xs text-slate-500">
+            ${images.length ? `${images.length} foto dokumentasi • Klik foto untuk memperbesar` : "Belum ada foto"}
+          </div>
+
+          ${x.URL
+            ? `<a href="${esc(x.URL)}" target="_blank" rel="noopener"
+                 class="inline-block mt-4 text-sm font-bold text-blue-600 hover:underline">
+                 Buka sumber ↗
+               </a>`
+            : ""}
+        </div>
+      </article>`;
+  }).join("");
+}
+function renderSertifikasi(){
+  sertifikasiGrid.innerHTML=db.Sertifikasi.map(x=>`
+    <article class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+      <div class="flex items-center justify-between gap-3"><span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300 text-[10px] font-bold">${esc(x.Kategori)}</span><span class="text-xs text-slate-500">${esc(x.Tahun)}</span></div>
+      <h3 class="font-extrabold mt-4">${esc(x.Judul)}</h3><p class="text-sm text-slate-600 dark:text-slate-300 mt-2">${esc(x.Deskripsi)}</p>
+      ${x.URL?`<a href="${esc(x.URL)}" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-bold text-blue-600 hover:underline">Lihat sertifikat ↗</a>`:""}
+    </article>`).join("");
+}
+function renderAll(){renderStats();renderKegiatan();renderLapangan();renderDokumentasi();renderSertifikasi();}
+async function loadFromGoogleSheets(){
+  if(!GOOGLE_SHEETS_API_URL || GOOGLE_SHEETS_API_URL.includes("GANTI_DENGAN")){
+    syncStatus.textContent="Mode data lampiran • URL Google Sheets belum diatur";
+    return;
+  }
+  try{
+    const res=await fetch(GOOGLE_SHEETS_API_URL+"?action=getAll",{cache:"no-store"});
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    const incoming=await res.json();
+    // menerima format {Kegiatan:[], Dokumentasi:[], HasilLapangan:[], Sertifikasi:[]}
+    for(const k of Object.keys(db)) if(Array.isArray(incoming[k])) db[k]=incoming[k].filter(x => k==="HasilLapangan" || String(x.Aktif??"true").toLowerCase()==="true");
+    syncStatus.textContent="Terhubung • data Google Sheets";
+    renderAll();
+  }catch(err){
+    console.error(err);
+    syncStatus.textContent="Gagal sinkron • menampilkan data lampiran";
+  }
+}
+function init(){
+  if(localStorage.getItem("theme")==="dark") document.documentElement.classList.add("dark");
+  year.textContent=new Date().getFullYear();
+  if(PROFILE_PHOTO_URL){
+    const profileImg = driveImage(PROFILE_PHOTO_URL);
+    profilePhoto.src = profileImg;
+    profilePhoto.onload = () => {
+      profilePhoto.classList.remove("hidden");
+      profilePlaceholder.classList.add("hidden");
+    };
+    profilePhoto.onerror = () => {
+      profilePhoto.classList.add("hidden");
+      profilePlaceholder.classList.remove("hidden");
+    };
+  }
+  renderAll();
+  loadFromGoogleSheets();
+}
+document.addEventListener("DOMContentLoaded",init);
+</script>
+
+<script id="CONTACT_FORM_HANDLER">
+(function(){
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    const destination = 'emailanda@example.com';
+    const body = 'Nama: ' + name + '\nEmail: ' + email + '\n\n' + message;
+
+    window.location.href =
+      'mailto:' + destination +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+
+</body>
+</html>
